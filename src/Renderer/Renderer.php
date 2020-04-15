@@ -20,10 +20,10 @@ class Renderer implements RendererInterface
      */
     private $template;
 
-    public function __construct(string $baseViewsPath, string $template)
+    public function __construct(string $baseViewsPath, string $template, string $appPath)
     {
-        $this->baseViewsPath = APP_PATH . $baseViewsPath;
-        $this->template = APP_PATH . $template;
+        $this->baseViewsPath = $appPath . $baseViewsPath;
+        $this->template = $appPath . $template;
     }
 
     /**
